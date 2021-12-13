@@ -1,0 +1,168 @@
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%); 
+
+$very-dark-blue: hsl(234, 12%, 34%);
+$grayish-blue: hsl(229, 6%, 66%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: $very-light-gray;
+}
+
+.contenedor {
+    display: flex;
+    margin: 20px 20px 20px 20px;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.header-flex {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    height: 270px;
+    
+    // align-self: center;
+
+    .header {
+        font-weight: 200;
+        font-size: 2.3rem;
+        color: $very-dark-blue;
+        width: auto;
+    }
+
+    .slogan {
+        font-weight: 600;
+        font-size: 2.3rem;
+        color: $very-dark-blue;
+        width: auto;
+    }
+
+    .info {
+        font-weight: 400;
+        color: $grayish-blue;
+        font-size: 15px;
+        margin: 15px;
+        width: 550px;        
+    }
+}
+
+.main-flex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+
+    .columna-seccion{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        // height: 520px;
+        max-width: 360px;
+        justify-content: center;
+        padding: 20px;
+        flex-shrink: 1;
+        flex-grow: 1;
+
+        .seccion-tarjeta {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            background-color: white;
+            border-radius: 5px;
+            height: 180px;
+            box-shadow: 0px 1px 15px $grayish-blue;
+            
+            // flex-basis: 1;
+            h3 {
+                font-size: 20px;
+                font-weight: 600;
+                color: $very-dark-blue;
+            }
+            p {
+                font-weight: 400;
+                color: $grayish-blue;
+                font-size: 13px;
+                flex-grow: 1; 
+                text-align: left;   
+            }    
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+        .cyan {
+            border-top: 5px solid $cyan;        
+        }
+        .rojo {
+            border-top: 5px solid $red;
+            margin-bottom: 17px;
+        }
+        .naranja {
+            border-top: 5px solid $orange;
+            margin-top: 17px;        
+        }
+        .azul {
+            border-top: 5px solid $blue;        
+        }
+    }   
+}
+
+footer {
+    margin: 14px;
+}
+
+// Diseño Movil
+
+@media (max-width: 767.98px) {
+
+    .contenedor {
+        margin: 0 auto;
+    }
+
+    .header-flex {
+        height: 270px;
+        margin: 0 auto;        
+        // align-self: center;
+    
+        .header {
+            font-size: 1.5rem;
+        }
+    
+        .slogan {
+            font-size: 1.5rem;
+        }
+    
+        .info { 
+            font-size: 15px;
+            margin: 15px;
+            max-width: 320px;        
+        }
+    }
+
+    .main-flex {
+        display: flex;
+        flex-direction: column;
+
+        .columna-seccion{
+            justify-content: center;
+            padding: 17px;
+    
+            .seccion-tarjeta {
+                width: 240px;
+                padding: 20px;
+                padding-top: 15px;  
+            }          
+        }
+    }
+}
