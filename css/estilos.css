@@ -54,7 +54,6 @@ body {
   max-width: 360px;
   justify-content: center;
   padding: 20px;
-  flex-shrink: 1;
   flex-grow: 1;
 }
 .main-flex .columna-seccion .seccion-tarjeta {
